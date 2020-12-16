@@ -72,14 +72,13 @@ public class MailTest {
           //Ввод темы письма
           mailPage.inTextTema("Автоматическая отправка письма");
           System.out.println("Шаг 11");
-          //Ввод текста в тело письма
-          //driver.switchTo().frame(0);
+          //Ввод текста в тело письма (переключение на iframe  с индексом 0)
           (new WebDriverWait(driver,30))
                   .until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
           mailPage.clTextBody();
-          mailPage.inTextBody("Привет от Selenium Webdriver"+System.getProperty("line.separator"));
+          mailPage.inTextBody("Привет от автотеста"+System.getProperty("line.separator"));
           mailPage.inTextBody("--"+System.getProperty("line.separator"));
-          mailPage.inTextBody("Андрей Чемисов");
+          mailPage.inTextBody("Selenium Webdriver");
           driver.switchTo().defaultContent();
           System.out.println("Шаг 12");
           //Нажать кнопку "Отправить"
