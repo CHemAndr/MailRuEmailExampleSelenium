@@ -15,8 +15,6 @@ public class MailTest {
     public static MailPage mailPage;
     public static WebDriver driver;
 
-
-
       @BeforeAll
       static void setup() {
            //определение пути до драйвера и его настройка
