@@ -98,7 +98,4 @@ public class MailPage {
 
     // Нажатие кнопки "Выход"
     public void outMail() { outBtn.click(); }
-
-
-
 }
